@@ -54,7 +54,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: #fae5e2;
+    background: #f9d6d4;
     display: flex;
 }
 .sidebar {
@@ -72,6 +72,6 @@ main {
 #interests {
     border: 4px #280412;
     border-radius: 10px;
-    padding: 50px;
+    padding: 30px;
     border-style: dotted;
 }
