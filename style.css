@@ -1,5 +1,5 @@
 body {
-    background: antiquewhite;
+    background: rgb(254, 227, 227);
     color: #280412;
     padding: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -15,7 +15,7 @@ img {
 
 /* navigation menu */
 nav {
-    background: #f9d6d4;
+    background: #ffd6d3;
     color: #280412;
    margin: 0 auto;
    margin-bottom: 20px;
@@ -54,7 +54,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: #f9d6d4;
+    background: #ffdfde;
     display: flex;
 }
 .sidebar {
