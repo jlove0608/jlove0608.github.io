@@ -72,6 +72,5 @@ main {
 #interests {
     border: 4px #280412;
     border-radius: 10px;
-    padding: 30px;
-    border-style: dotted;
+    padding: 20px;
 }
