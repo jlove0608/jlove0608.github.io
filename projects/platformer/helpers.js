@@ -379,14 +379,14 @@ function deathOfPlayer() {
     canvas.height / 2
   );
   ctx.fillStyle = "#515559";
-  ctx.font = "800% serif";
+  ctx.font = "700% monospace";
   ctx.fillText(
     "/ᐠ - ˕ -マ...",
     canvas.width / 4,
     canvas.height / 6 + canvas.height / 5,
     (canvas.width / 16) * 14
   );
-  ctx.font = "250% serif";
+  ctx.font = "250% monospace";
   ctx.fillText(
     "press any key to try again",
     canvas.width / 4,
