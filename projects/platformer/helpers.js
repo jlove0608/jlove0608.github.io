@@ -409,9 +409,10 @@ function playerFrictionAndGravity() {
   }
 }
 
+
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillStyle = "#515559";
+    ctx.fillStyle = 808080;
     ctx.fillRect(
       platforms[i].x,
       platforms[i].y,
@@ -655,11 +656,11 @@ function keyboardControlActions() {
     return;
   }
 
-  if (keyPress.left) {
+  if (keyPress.left || keyPress.a) {
     player.speedX -= walkAcceleration;
     player.facingRight = false;
   }
-  if (keyPress.right) {
+  if (keyPress.right || keyPress.d) {
     player.speedX += walkAcceleration;
     player.facingRight = true;
   }

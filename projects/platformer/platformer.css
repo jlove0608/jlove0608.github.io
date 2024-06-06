@@ -3,10 +3,15 @@ body {
 }
 
 canvas {
-    background: #f7e9de;
+    background-image: url("https://i.ytimg.com/vi/UAtJg3Q-hJQ/maxresdefault.jpg");
+    background-size: cover;
 }
 
 img {
   display: none;
+}
+
+image {
+  background-image: url("https://www.textures.com/system/gallery/photos/Manmade/Pipes/42594/Pipes0071_1_350.jpg");
 }
 
