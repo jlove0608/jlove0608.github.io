@@ -357,9 +357,22 @@ function projectileCollision() {
   }
 }
 
+//function drawPlatforms() {
+ //for (var i = 0; i < platforms.length; i++) {
+  //  ctx.drawImage(
+   //   platformImage,
+   //   platforms[i].x,
+   //   platforms[i].y,
+   //   platforms[i].width,
+  //    platforms[i].height
+  //  )
+ // }
+//}
+
+
 function deathOfPlayer() {
-  ctx.fillStyle = "#f0bbb4";
-  ctx.fillRect(
+  ctx.drawImage(
+    deathImage,
     canvas.width / 4,
     canvas.height / 6,
     canvas.width / 2,
@@ -412,13 +425,13 @@ function playerFrictionAndGravity() {
 
 function drawPlatforms() {
   for (var i = 0; i < platforms.length; i++) {
-    ctx.fillRect(
-      ctx.drawImage(),
+    ctx.drawImage(
+      platformImage,
       platforms[i].x,
       platforms[i].y,
       platforms[i].width,
       platforms[i].height
-    );
+    )
   }
 }
 

@@ -10,6 +10,7 @@ $(function () {
       projectileImage = document.getElementById("projectile");
       cannonImage = document.getElementById("cannon");
       platformImage = document.getElementById("platform")
+      deathImage = document.getElementById("death")
       $(document).on("keydown", handleKeyDown);
       $(document).on("keyup", handleKeyUp);
       firstTimeSetup = false;
