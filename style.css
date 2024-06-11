@@ -1,6 +1,6 @@
 body {
-    background: rgb(254, 227, 227);
-    color: #280412;
+    background-image: url("https://img.freepik.com/premium-vector/cute-cat-box-seamless-background-repeating-pattern-wallpaper-background-cute-seamless-pattern-background_42349-853.jpg");
+    background-size: fill;
     padding: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

@@ -8,14 +8,14 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: #ff5679;
 			font-size: 300%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 70px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -36,7 +36,6 @@
 			//////////////////////////////////////////////////////////////////
 			/////////////////// SETUP DO NOT DELETE //////////////////////////
 			//////////////////////////////////////////////////////////////////
-			
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
@@ -48,8 +47,9 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY)
 			}
 
 			// changes the text displayed on the Box
@@ -62,7 +62,15 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			var positionX = 0;
+			var points = 0;
+			var speedX = 10;
+			var positionY = 0;
+			var speedY = 10;
+			var boardHeight = jQuery(window).height();
+			var randX = Math.random() * boardWidth
+			var randY = Math.random() * boardHeight
+
 
 			
 			/* 
@@ -71,9 +79,31 @@
 			turn it around! 
 			*/
 			function update() {
-				
+				positionX = positionX + speedX;
+				positionY = positionY + speedY;
+				moveBoxTo(positionX, positionY);
+				if (positionX > (boardWidth - 50)) {
+					speedX = -speedX;
+					getRandomColor();
+				}
+				if (positionX < 0){
+					speedX = speedX * -1;
+					getRandomColor();
+				}
+				if (positionY > (boardHeight - 50)) {
+					speedY = -speedY;
+					getRandomColor();
+				}
+				if (positionY < 0){
+					speedY = speedY * -1;
+					getRandomColor();
+				}
+			}
 
-			};
+			function getRandomColor(){
+				var colorStr = Math.random() * 255;
+				box.css('background-color', colorStr)
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -81,10 +111,24 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
-			};
+				box.css('background-color', colorStr);
+				positionX = randX - 50;
+				positionY = randY - 50;
+				points = points + 1;
+				changeBoxText(points);
+				if (speedX > 0){
+					speedX += 3;
+				}
+				else {
+					speedX -= 3;
+				}
+				if (speedY > 0){
+					speedY += 3;
+				}
+				else {
+					speedY -= 3;
+				}
+			}
 		})();
 	</script>
 </body>
