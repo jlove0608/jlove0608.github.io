@@ -70,6 +70,7 @@
 			var boardHeight = jQuery(window).height();
 			var randX = Math.random() * boardWidth
 			var randY = Math.random() * boardHeight
+			var colorStr = 255
 
 
 			
@@ -101,7 +102,7 @@
 			}
 
 			function getRandomColor(){
-				var colorStr = Math.random() * 255;
+				colorStr = Math.random() * 255;
 				box.css('background-color', colorStr)
 			}
 
@@ -111,7 +112,6 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				box.css('background-color', colorStr);
 				positionX = randX - 50;
 				positionY = randY - 50;
 				points = points + 1;
