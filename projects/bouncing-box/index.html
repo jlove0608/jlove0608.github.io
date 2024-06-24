@@ -64,9 +64,9 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
 			var points = 0;
-			var speedX = 10;
+			var speedX = 1;
 			var positionY = 0;
-			var speedY = 10;
+			var speedY = 1;
 			var boardHeight = jQuery(window).height();
 			var randX = Math.random() * boardWidth
 			var randY = Math.random() * boardHeight
@@ -103,7 +103,7 @@
 
 			function getRandomColor(){
 				colorStr = Math.random() * 255;
-				box.css('background-color', colorStr)
+				box.css('background-color', colorStr);
 			}
 
 			/* 
